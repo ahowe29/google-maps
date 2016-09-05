@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  
+  <body>
+    <h1>The Sheraton Grande Sukhumvit Hotel</h1>
+    <div id="map" style="width:300px;height:180px;"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 13.737571, lng: 100.559170};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqqxNzlhuhGZk7GeLW58cCeRqTXUE3IDw&callback=initMap">
+    </script>
+  </body>
+</html>
